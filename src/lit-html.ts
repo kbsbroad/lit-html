@@ -202,7 +202,8 @@ export class Template {
           // expression in this attribute attribute
           const stringForPart = strings[partIndex];
           // Find the attribute name
-          const attributeNameInPart = stringForPart.match(lastAttributeNameRegex)![1];
+          const attributeNameInPart =
+              stringForPart.match(lastAttributeNameRegex)![1];
           // Find the corresponding attribute
           const attribute = attributes.getNamedItem(attributeNameInPart);
           const stringsForAttributeValue =
@@ -311,7 +312,7 @@ export class Template {
 
 /**
  * Returns a value ready to be inserted into a Part from a user-provided value.
- * 
+ *
  * If the user value is a directive, this invokes the directive with the given
  * part. If the value is null, it's converted to undefined to work better
  * with certain DOM APIs, like textContent.
